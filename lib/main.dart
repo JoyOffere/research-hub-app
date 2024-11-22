@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'screens/search_screen.dart';
-import 'screens/detail_screen.dart';
+import 'screens/details_screen.dart';
 
 void main() {
   runApp(ResearchHubApp());
@@ -20,7 +20,7 @@ class ResearchHubApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/search': (context) => SearchScreen(),
-        '/detail': (context) => DetailScreen(),
+        '/detail': (context) => DetailsScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
