@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
-import 'screens/search_screen.dart';
-import 'screens/details_screen.dart';
+
+import 'screens/index.dart';
 
 void main() {
-  runApp(ResearchHubApp());
+  runApp(const MyApp());
 }
 
-class ResearchHubApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Research Hub',
+      title: 'Flutter Movie App',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomeScreen(),
-        '/search': (context) => SearchScreen(),
-        '/detail': (context) => DetailsScreen(),
-      },
-      debugShowCheckedModeBanner: false,
+      home: const IndexPage(),
     );
   }
 }
